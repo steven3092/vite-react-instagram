@@ -1,0 +1,26 @@
+.friend-stories-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.friend-stories-subcontent {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+
+.image-content {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: solid 3px black;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.border-image-content {
+  width: 66px;
+  height: 66px;
+  background: linear-gradient(#cc00ff, #ff9900);
+  border-radius: 50%;
+}
