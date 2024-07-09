@@ -1,6 +1,8 @@
 .friend-stories-content {
   display: flex;
   flex-direction: row;
+  padding: 8px 0px;
+  margin-bottom: 24px;
 }
 
 .friend-stories-subcontent {
@@ -21,6 +23,12 @@
 .border-image-content {
   width: 66px;
   height: 66px;
-  background: linear-gradient(#cc00ff, #ff9900);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%
+  );
   border-radius: 50%;
 }

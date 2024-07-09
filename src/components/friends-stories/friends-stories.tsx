@@ -9,12 +9,11 @@ export const FriendsStory = () => {
   };
 
   const fakeUsers = Array.from({ length: 9 }, createUser);
-  console.log(fakeUsers);
 
   return (
     <div className="friend-stories-content">
-      {fakeUsers.map((user) => (
-        <div className="friend-stories-subcontent">
+      {fakeUsers.map((user, index) => (
+        <div key={index} className="friend-stories-subcontent">
           <div className="border-image-content">
             <img
               className="image-content"
