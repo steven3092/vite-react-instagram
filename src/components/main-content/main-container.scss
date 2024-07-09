@@ -1,0 +1,25 @@
+.section-container {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+}
+
+.main-right-container {
+  padding-left: 64px;
+  display: block;
+}
+
+@media (width <= 430px) {
+  .main-right-container {
+    display: none;
+  }
+}
