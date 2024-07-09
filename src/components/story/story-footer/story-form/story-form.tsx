@@ -5,6 +5,15 @@ import { FormEvent, useRef } from "react";
 import { Button } from "../../../button/button";
 import "./story-form.scss";
 
+interface EmojiData {
+  id: string;
+  name: string;
+  native: string;
+  unified: string;
+  short_names: string[];
+  keywords: string[];
+}
+
 export const StoryForm = () => {
   const pickerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -26,7 +35,7 @@ export const StoryForm = () => {
     }
   };
 
-  const handleOnClickEmoteSelect = (e: any) => {
+  const handleOnClickEmoteSelect = (e: EmojiData) => {
     const textarea = textareaRef.current;
     if (textarea) {
       const start = textarea.selectionStart;
