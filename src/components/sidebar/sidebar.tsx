@@ -2,7 +2,7 @@ import add from "../../assets/add-icon.svg";
 import at from "../../assets/at-symbol-icon.svg";
 import home from "../../assets/home-icon.svg";
 import reel from "../../assets/youtube-icon.svg";
-import instagram from "../../assets/Instagram-icon.svg";
+import instagram from "../../assets/instagram-icon.svg";
 import send from "../../assets/send-icon.svg";
 import heart from "../../assets/heart-icon.svg";
 import { Profile } from "../profile/profile";
