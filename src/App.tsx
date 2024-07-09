@@ -1,18 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { FriendsStory } from "./components/friends-stories/friends-stories";
-import { MainContent } from "./components/main-content/main-content";
+import { MainContainer } from "./components/main-content/main-container";
+import { Sidebar } from "./components/sidebar/sidebar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <FriendsStory />
-      {<MainContent />}
-    </>
+    <div className="instagram">
+      <Sidebar />
+      <MainContainer />
+    </div>
   );
 }
 
