@@ -8,40 +8,61 @@ import { SendIcon } from "../../../assets/send-vector-icon";
 import { SaveIcon } from "../../../assets/save-vector-icon";
 
 export const StoryFooter = () => {
-  const [heartColorBorder, setHeartColorBorder] = useState<string>("#ffffff");
-  const [messageCircleColorBorder, setMessageCircleColorBorder] =
-    useState<string>("#ffffff");
-  const [sendColorBorder, setSendColorBorder] = useState<string>("#ffffff");
-  const [saveColorBorder, setSaveColorBorder] = useState<string>("#ffffff");
-  const [heartColor, setHeartColor] = useState<string>("#000000");
+  const [colorIcons, setColorIcons] = useState({
+    heartColorBorder: "#ffffff",
+    heartColor: "#000000",
+    messageCircleColorBorder: "#ffffff",
+    sendColorBorder: "#ffffff",
+    saveColorBorder: "#ffffff",
+  });
   const [fakeNumber, setFakeNumber] = useState<number>(
     faker.number.int({ min: 0, max: 10000 })
   );
 
   const handleOnClickHeart = () => {
-    if (heartColor === "red" && heartColorBorder === "red") {
-      setHeartColorBorder("#ffffff");
-      setHeartColor("#000000");
+    if (
+      colorIcons.heartColor === "red" &&
+      colorIcons.heartColorBorder === "red"
+    ) {
+      setColorIcons({
+        ...colorIcons,
+        heartColorBorder: "#ffffff",
+        heartColor: "#000000",
+      });
       setFakeNumber(fakeNumber - 1);
       return;
     }
 
-    setHeartColorBorder("red");
-    setHeartColor("red");
+    setColorIcons({
+      ...colorIcons,
+      heartColorBorder: "red",
+      heartColor: "red",
+    });
     setFakeNumber(fakeNumber + 1);
     return;
   };
 
   const handleOnMouseOverHeart = () => {
-    if (heartColor !== "red" && heartColorBorder !== "red") {
-      setHeartColorBorder("grey");
+    if (
+      colorIcons.heartColor !== "red" &&
+      colorIcons.heartColorBorder !== "red"
+    ) {
+      setColorIcons({
+        ...colorIcons,
+        messageCircleColorBorder: "#ffffff",
+        sendColorBorder: "#ffffff",
+        heartColorBorder: "grey",
+      });
       return;
     }
   };
 
   const handleOnMouseLeaveHeart = () => {
-    if (heartColorBorder === "grey") {
-      setHeartColorBorder("#ffffff");
+    if (colorIcons.heartColorBorder === "grey") {
+      setColorIcons({
+        ...colorIcons,
+        heartColorBorder: "#ffffff",
+      });
       return;
     }
   };
@@ -59,35 +80,78 @@ export const StoryFooter = () => {
             <HeartIcon
               width="26px"
               height="26px"
-              color={heartColorBorder}
-              fillColor={heartColor}
+              color={colorIcons.heartColorBorder}
+              fillColor={colorIcons.heartColor}
             />
           </div>
           <div
             className="story-footer-message"
-            onMouseOver={() => setMessageCircleColorBorder("grey")}
-            onMouseLeave={() => setMessageCircleColorBorder("#ffffff")}
+            onMouseOver={() =>
+              setColorIcons({
+                ...colorIcons,
+                sendColorBorder: "#ffffff",
+                heartColorBorder: "#ffffff",
+                messageCircleColorBorder: "grey",
+              })
+            }
+            onMouseLeave={() =>
+              setColorIcons({
+                ...colorIcons,
+                messageCircleColorBorder: "#ffffff",
+              })
+            }
           >
             <MessageCircleIcon
               width="26px"
               height="26px"
-              color={messageCircleColorBorder}
+              color={colorIcons.messageCircleColorBorder}
             />
           </div>
           <div
             className="story-footer-send"
-            onMouseOver={() => setSendColorBorder("grey")}
-            onMouseLeave={() => setSendColorBorder("#ffffff")}
+            onMouseOver={() =>
+              setColorIcons({
+                ...colorIcons,
+                heartColorBorder: "#ffffff",
+                messageCircleColorBorder: "#ffffff",
+                sendColorBorder: "grey",
+              })
+            }
+            onMouseLeave={() =>
+              setColorIcons({
+                ...colorIcons,
+                sendColorBorder: "#ffffff",
+              })
+            }
           >
-            <SendIcon width="26px" height="26px" color={sendColorBorder} />
+            <SendIcon
+              width="26px"
+              height="26px"
+              color={colorIcons.sendColorBorder}
+            />
           </div>
         </div>
         <div
           className="story-footer-save"
-          onMouseOver={() => setSaveColorBorder("grey")}
-          onMouseLeave={() => setSaveColorBorder("#ffffff")}
+          onMouseOver={() =>
+            setColorIcons({
+              ...colorIcons,
+              messageCircleColorBorder: "#ffffff",
+              saveColorBorder: "grey",
+            })
+          }
+          onMouseLeave={() =>
+            setColorIcons({
+              ...colorIcons,
+              saveColorBorder: "#ffffff",
+            })
+          }
         >
-          <SaveIcon width="30px" height="30px" color={saveColorBorder} />
+          <SaveIcon
+            width="30px"
+            height="30px"
+            color={colorIcons.saveColorBorder}
+          />
         </div>
       </div>
       <div className="story-footer-likes">{fakeNumber} likes</div>
