@@ -1,0 +1,67 @@
+@media (width <= 430px) {
+  .suggestion {
+    visibility: hidden;
+  }
+}
+
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  height: 100vh;
+  position: static;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 340px;
+}
+
+.suggestion-right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.see-all-button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+
+  &:hover {
+    color: #7a7a7a;
+  }
+}
+
+.suggestion-bottom-block {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.suggestion-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+
+.suggestion-users {
+  padding: 8px 0px;
+}
+
+.users-suggested {
+  padding: 8px 0px;
+}
+
+.suggestion-button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: 900;
+
+  &:hover {
+    color: white;
+  }
+}
