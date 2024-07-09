@@ -1,0 +1,21 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  align-items: flex-start;
+}
+
+.suggested-info {
+  font-size: 12px;
+  color: #a8a8a8a8;
+}
+
+.user-info-sub-text {
+  font-size: 14px;
+  color: #a8a8a8a8;
+}
+
+.user-info-name {
+  text-transform: lowercase;
+  word-spacing: -4px;
+}
