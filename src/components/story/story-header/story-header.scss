@@ -1,0 +1,58 @@
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.story-header-left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.story-header-image-content {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: solid 3px black;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.story-header-border-image-content {
+  width: 42px;
+  height: 42px;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%
+  );
+  border-radius: 50%;
+}
+
+.story-header-name-people {
+  margin-left: 10px;
+}
+
+.story-header-time {
+  color: grey;
+}
+
+.story-header-dot {
+  padding-top: 8px;
+}
+
+.story-header-dots {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.story-image {
+  padding: 0px 30px;
+}
