@@ -7,8 +7,6 @@ import send from "../../assets/send-icon.svg";
 import heart from "../../assets/heart-icon.svg";
 import { Profile } from "../profile/profile";
 import "./sidebar.scss";
-import { HeartIcon } from "../../assets/heart-icon";
-import { SendIcon } from "../../assets/send-vector-icon";
 import search from "../../assets/search-icon.svg";
 import explore from "../../assets/explore-icon.svg";
 import lines from "../../assets/lines-icon.svg";
