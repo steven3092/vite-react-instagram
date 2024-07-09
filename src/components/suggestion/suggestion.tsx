@@ -30,8 +30,8 @@ export const Suggestion = () => {
         </div>
         <div className="suggestion-users">
           {fakeUsers.map((user, index) => (
-            <div className="users-suggested">
-              <User key={index}>
+            <div key={index} className="users-suggested">
+              <User>
                 <div className="suggestion-right-side">
                   <Profile cssStyle="image-profile-bigger" />
                   <UserInfo name={user.firstName} info="Suggested for you" />
