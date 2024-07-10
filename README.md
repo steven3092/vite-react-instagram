@@ -5,7 +5,7 @@
 # React + TypeScript + Vite (Instagroom)
 
 This small app is an instagram-like app.
-I got inspiration of the real instagram and tried to reproduce as it, on the desktop version.
+I got inspiration of the real instagram and tried to reproduce as it is, on the desktop version.
 
 I use faker to simulate data.
 
