@@ -2,38 +2,20 @@
 
 - https://main--instagroom-prod.netlify.app/
 
-# React + TypeScript + Vite
+# React + TypeScript + Vite (Instagroom)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This small app is an instagram-like app.
+I got inspiration of the real instagram and tried to reproduce as it, on the desktop version.
 
-Currently, two official plugins are available:
+I use faker to simulate data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The idea was to focus on the front side only, and mainly sass design.
 
-## Expanding the ESLint configuration
+There is a little bit of functionalities like adding a comment, or like a photo.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+There is no navigation settled. Is just the home page from instagram.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-
+Below a small video for more context :
 
 
 https://github.com/steven3092/vite-react-instagram/assets/17517951/244f1580-b09c-48c1-9952-324f2be7b584
