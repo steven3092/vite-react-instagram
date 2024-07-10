@@ -67,6 +67,49 @@ export const StoryFooter = () => {
     }
   };
 
+  const handleOnMouseOverMessageCircle = () => {
+    if (
+      colorIcons.heartColor !== "red" &&
+      colorIcons.heartColorBorder !== "red"
+    ) {
+      setColorIcons({
+        ...colorIcons,
+        sendColorBorder: "#ffffff",
+        heartColorBorder: "#ffffff",
+        messageCircleColorBorder: "grey",
+      });
+      return;
+    }
+    setColorIcons({
+      ...colorIcons,
+      sendColorBorder: "#ffffff",
+      heartColorBorder: "red",
+      messageCircleColorBorder: "grey",
+    });
+  };
+
+  const handleOnMouseOverSend = () => {
+    if (
+      colorIcons.heartColor !== "red" &&
+      colorIcons.heartColorBorder !== "red"
+    ) {
+      setColorIcons({
+        ...colorIcons,
+        heartColorBorder: "#ffffff",
+        messageCircleColorBorder: "#ffffff",
+        sendColorBorder: "grey",
+      });
+      return;
+    }
+
+    setColorIcons({
+      ...colorIcons,
+      heartColorBorder: "red",
+      messageCircleColorBorder: "#ffffff",
+      sendColorBorder: "grey",
+    });
+  };
+
   return (
     <footer className="story-footer">
       <div className="story-footer-icons">
@@ -86,14 +129,7 @@ export const StoryFooter = () => {
           </div>
           <div
             className="story-footer-message"
-            onMouseOver={() =>
-              setColorIcons({
-                ...colorIcons,
-                sendColorBorder: "#ffffff",
-                heartColorBorder: "#ffffff",
-                messageCircleColorBorder: "grey",
-              })
-            }
+            onMouseOver={handleOnMouseOverMessageCircle}
             onMouseLeave={() =>
               setColorIcons({
                 ...colorIcons,
@@ -109,14 +145,7 @@ export const StoryFooter = () => {
           </div>
           <div
             className="story-footer-send"
-            onMouseOver={() =>
-              setColorIcons({
-                ...colorIcons,
-                heartColorBorder: "#ffffff",
-                messageCircleColorBorder: "#ffffff",
-                sendColorBorder: "grey",
-              })
-            }
+            onMouseOver={handleOnMouseOverSend}
             onMouseLeave={() =>
               setColorIcons({
                 ...colorIcons,
